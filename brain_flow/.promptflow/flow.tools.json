@@ -1,0 +1,120 @@
+{
+  "package": {},
+  "code": {
+    "hello.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      }
+    },
+    "hello.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "function": "my_python_tool"
+    },
+    "tools/hello.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "tools/hello.py",
+      "function": "my_python_tool"
+    },
+    "templates/first.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "templates/first.jinja2"
+    },
+    "existing_nodes.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "existing_nodes.py",
+      "function": "my_python_tool"
+    },
+    "list_existing_nodes_node.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "list_existing_nodes_node.py",
+      "function": "my_python_tool"
+    },
+    "first.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "first.py",
+      "function": "first_node"
+    },
+    "call_existing_nodes_prompt.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "call_existing_nodes_prompt.py",
+      "function": "my_python_tool"
+    },
+    "list_needed_nodes_node.py": {
+      "type": "python",
+      "inputs": {
+        "input": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "list_needed_nodes_node.py",
+      "function": "list_needed_nodes"
+    },
+    "list_needed_nodes_prompt.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "list_needed_nodes_prompt.jinja2"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+You will be given a list of instructions that are designed to fulfil a request. 
+Your job is to generate a name and a system prompt for an LLM designed to  fulfil each task. The system prompt, the initial request, and the specific instruction will both be fed to the LLM.
+These names and prompts should not be designed to fulfil the specific task, but be more general, designed to fulfil a broader range of tasks.
+Do not reference any of the specifics of the task.
+You can assign multiple tasks to the same LLM if appropriate.
+
+Here is an example output:
+[
+    {"name": "user_clarificaiton", "prompt": "Generate a question to clarify specific details in order to fulfil a request."},
+    {"name": "option_selector", "prompt": "Select the best option from a list of choices, optimizing for the users desires and compatibility with other choices and factors"},
+    {"name": "arithmatic_code_writer", "prompt": "Write code that will programatically solve a arithmetic question."}
+]
+
+Here is the list of instructions for you general LMM agents:
+{{text}}

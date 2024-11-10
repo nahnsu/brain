@@ -1,0 +1,41 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  text:
+    type: string
+    default: ' What should I call a dynamic network of LLM nodes involving the word
+      "brain"'
+outputs:
+  output_prompt:
+    type: string
+    reference: ${list_needed_nodes_node.output}
+nodes:
+- name: first_prompt
+  type: prompt
+  source:
+    type: code
+    path: templates/first.jinja2
+  inputs:
+    text: ${inputs.text}
+- name: first_node
+  type: python
+  source:
+    type: code
+    path: first.py
+  inputs:
+    input1: ${first_prompt.output}
+- name: list_needed_nodes_node
+  type: python
+  source:
+    type: code
+    path: list_needed_nodes_node.py
+  inputs:
+    input: ${list_needed_nodes_prompt.output}
+- name: list_needed_nodes_prompt
+  type: prompt
+  source:
+    type: code
+    path: list_needed_nodes_prompt.jinja2
+  inputs:
+    text: ${first_node.output}
