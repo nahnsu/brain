@@ -1,0 +1,3 @@
+Venv with PowerShell:
+.\venv\Scripts\Activate.ps1
+
