@@ -9,9 +9,9 @@ inputs:
 outputs:
   output_prompt:
     type: string
-    reference: ${list_needed_nodes_node.output}
+    reference: ${list_needed_nodes_prompt.output}
 nodes:
-- name: first_prompt
+- name: decomposer_prompt
   type: prompt
   source:
     type: code
@@ -24,14 +24,7 @@ nodes:
     type: code
     path: first.py
   inputs:
-    input1: ${first_prompt.output}
-- name: list_needed_nodes_node
-  type: python
-  source:
-    type: code
-    path: list_needed_nodes_node.py
-  inputs:
-    input: ${list_needed_nodes_prompt.output}
+    input1: ${decomposer_prompt.output}
 - name: list_needed_nodes_prompt
   type: prompt
   source:

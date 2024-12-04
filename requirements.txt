@@ -1,3 +1,4 @@
 promptflow==1.13.0
 promptflow-tools==1.4.0
 openai==1.55.3
+pinecone

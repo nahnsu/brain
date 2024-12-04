@@ -1,0 +1,13 @@
+inputs:
+  input:
+    type: string
+    default: ' text  What should I call a dynamic network of LLM nodes involving the
+      word "brain"'
+outputs: {}
+nodes:
+- name: decomposer_prompt
+  type: python
+  source:
+    type: code
+    path: decomposer_prompt.py
+  inputs: {}
